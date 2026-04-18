@@ -10,7 +10,7 @@ It consists of two main parts:
 
 ## Demo
 
-[![Demo](videos/pic1.png)](https://github.com/Sanyaaaa1/wiki-visualiser/blob/main/videos/vid1.mp4)
+[![Demo](https://raw.githubusercontent.com/Sanyaaaa1/wiki-visualiser/main/videos/pic.png)](https://raw.githubusercontent.com/Sanyaaaa1/wiki-visualiser/main/videos/vid1.mp4)
 
 
 ## Features
