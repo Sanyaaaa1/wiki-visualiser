@@ -127,7 +127,11 @@ Internally converted into adjacency lists.
 
 ## Physics Model
 
-- The simulation uses a force-directed layout where nodes repel each other and edges act as springs pulling connected nodes together. A gravity force pulls all nodes toward the center to prevent the graph from drifting apart. Each frame, velocities are damped and capped to keep movement stable. A temperature system controls how much force is applied overall — it starts high and cools down each frame, so the graph settles naturally over time. To keep performance reasonable, repulsion is only calculated between nodes within a certain distance threshold, skipping pairs that are too far apart to meaningfully affect each other.
+- Repulsion between all nodes (distance threshold optimized)
+- Spring forces pull connected nodes together
+- Gravity toward center prevents drift
+- Damping and speed capping for stability
+- Temperature cooling — starts high, cools each frame until settled
 
 ---
 
