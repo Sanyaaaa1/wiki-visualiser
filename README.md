@@ -40,8 +40,8 @@ storing_project/
 ├── megagraph.json
 ├── scraper.py
 ├── visualizer.py
-├── videos/
-│   └── vid1.mp4
+├── video/
+│   └── video.GIF
 ```
 
 ---
@@ -127,11 +127,7 @@ Internally converted into adjacency lists.
 
 ## Physics Model
 
-- Repulsion between all nodes
-- Spring forces between linked nodes
-- Gravity toward center
-- Damping for stability
-- Temperature cooling system
+- The simulation uses a force-directed layout where nodes repel each other and edges act as springs pulling connected nodes together. A gravity force pulls all nodes toward the center to prevent the graph from drifting apart. Each frame, velocities are damped and capped to keep movement stable. A temperature system controls how much force is applied overall — it starts high and cools down each frame, so the graph settles naturally over time. To keep performance reasonable, repulsion is only calculated between nodes within a certain distance threshold, skipping pairs that are too far apart to meaningfully affect each other.
 
 ---
 
@@ -140,13 +136,14 @@ Internally converted into adjacency lists.
 - Optimized repulsion using distance threshold
 - Speed limiting per node
 - Cooling simulation over time
-- Works best for ~100–500 nodes
+- Works best for ~100-700 nodes
 
 ---
 
 ## Ideas for Expansion
 
 - Community detection / clustering
+- Add the active/passive node system
 - Search + node focus
 - Click-to-pin nodes
 - Web version (D3.js / WebGL)
